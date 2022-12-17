@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xxzy.EXLG.dao.UserDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.xxzy.EXLG.entity.UserEntity" id="userMap">
+        <result property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="telephone" column="telephone"/>
+        <result property="password" column="password"/>
+        <result property="balance" column="balance"/>
+        <result property="nickName" column="nick_name"/>
+<!--        <result property="age" column="age"/>-->
+        <result property="sex" column="sex"/>
+        <result property="email" column="email"/>
+        <result property="headImage" column="head_image"/>
+        <result property="userType" column="user_type"/>
+        <result property="employeeId" column="employee_id"/>
+        <result property="provinceId" column="province_id"/>
+        <result property="cityId" column="city_id"/>
+        <result property="countyId" column="county_id"/>
+        <result property="stageId" column="stage_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="isDelete" column="is_delete"/>
+    </resultMap>
+</mapper>

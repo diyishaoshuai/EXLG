@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: EXLG
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.136.86.86:3306/EXLG?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: dA5nD1lN4bH2eA4lP2aB
+    type: com.alibaba.druid.pool.DruidDataSource
+    #swagger配置
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  redis:
+    host: 8.136.86.86
+    port: 6379
+    password: aB0gH1lM7cH1iI1gC2bM
+  session:
+    store-type: redis    #将session存到redis里面 1、安全 2、分布式场景下可以实现session共享
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  #rabbit配置
+  rabbitmq:
+    host: 8.136.86.86
+    port: 5672
+    virtual-host: /
+    username: admin
+    password: oS4Qc41Lv7sKaueQ3BFG
+    listener:
+      direct:
+        acknowledge-mode: manual    # 开启手动签收消息
+
+server:
+  port: 8888
+
+#MybatusPlus全局配置
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-not-delete-value: 0  #逻辑未删除
+      logic-delete-value: 1      #逻辑删除
+  configuration:
+    #日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+

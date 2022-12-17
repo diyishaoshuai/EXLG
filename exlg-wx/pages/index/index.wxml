@@ -1,0 +1,69 @@
+<!-- 页面主体 -->
+<view class="mian">
+    <!-- 页面头部 -->
+    <view class="head">
+        <!-- logo -->
+        <image src="../../images/logo.png" class="logo"></image>
+    </view>
+    <!-- 轮播图 -->
+    <swiper class="images" indicator-dots indicator-color="white" circular autoplay interval="3000">
+        <swiper-item wx:for="{{imagesSrc}}" wx:key="images">
+            <image src="{{imagesSrc[index]}}" mode="widthFix" class="image"></image>
+        </swiper-item>
+    </swiper>
+    <!-- buttons -->
+    <view class="btns">
+        <view class="box">
+            <navigator url="./doorToDoor-bySelf/doorToDoor-bySelf">
+                <view class="btn" bindtap="doorToDoor">
+                    <image src="../../images/icon/car.png"></image><text class="mainText">快递员上门\n<text class="smllText">一小时内上门</text></text>
+                </view>
+            </navigator>
+            <view class="btn" bindtap="scanCode">
+                <image src="../../images/icon/scanCode.png"></image><text class="mainText"> 扫码寄\n<text class="smllText" bindtap="scanCode">扫运单二维码</text></text>
+            </view>
+        </view>
+
+        <view class="box">
+            <navigator url="./doorToDoor-bySelf/doorToDoor-bySelf">
+                <view class="btn" bindtap="bySelf">
+                    <image src="../../images/icon/position.png"></image><text class="mainText">服务点自寄\n<text class="smllText">自送服务网点</text></text>
+                </view>
+            </navigator>
+
+            <view class="btn">
+                <image src="../../images/icon/copy.png"></image><text class="mainText"> 批量寄\n<text class="smllText">寄多个快递</text></text>
+            </view>
+        </view>
+
+        <view class="box">
+            <view class="btn">
+                <image src="../../images/icon/addFriend.png"></image><text class="mainText">分享寄\n<text class="smllText">好友填收件地址</text></text>
+            </view>
+            <view class="btn">
+                <image src="../../images/icon/earth.png"></image><text class="mainText"> 国际及港澳台\n<text class="smllText">心之所系，虽远必达</text></text>
+            </view>
+        </view>
+    </view>
+
+    <!-- 一个小菜单 -->
+    <view class="menu">
+        <button open-type="contact" hover-class="none" class="contact">
+            <image src="../../images/icon/customerService.png" class="menuIcon"></image>
+            <text>在线客服</text>
+        </button>
+        <view>
+            <image src="../../images/icon/bill.png" class="menuIcon"></image>
+            <text>电子发票</text>
+        </view>
+        <view id="special">
+            <image src="../../images/icon/money.png" class="menuIcon"></image>
+            <text>运费时效查询</text>
+        </view>
+        <view>
+            <image src="../../images/icon/map.png" class="menuIcon"></image>
+            <text>附近网点</text>
+        </view>
+    </view>
+
+</view>

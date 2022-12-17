@@ -1,0 +1,116 @@
+/* 地址簿卡片 */
+.addresses{
+    box-sizing: border-box;
+    height: 330rpx;
+    width: 90%;
+    border: 4rpx solid #BDBDBD;
+    border-radius: 25rpx;
+    margin: 30rpx auto;
+    display: flex;
+    flex-direction: column;
+    padding:30rpx;
+    box-shadow: 5px 5px 5px #cdcfcf;
+}
+
+/* 姓名+电话 */
+.top{
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0 50rpx; */
+}
+.sendUsername{
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.sendTel{
+    margin-right:150rpx;
+    display: flex;
+    align-items: center;
+}
+
+/* 地址 */
+.address{
+    margin-top: 30rpx   ;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow:ellipsis;
+}
+
+/* 横线 */
+.line{
+    margin: 30rpx 0;
+    border-top:solid ;
+}
+
+/* 按钮组 */
+.btns{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btns view{
+    height: 65rpx;
+    width: 135rpx;
+    /* border: 4rpx solid; */
+    margin: 0 10rpx;
+    border-radius: 50rpx;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 10rpx;       
+}
+
+.btns image{
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.btns .edit{
+    background-color: #43DBD1;
+    border: 4rpx solid #BDBDBD;
+    color: white;
+}
+
+.btns .delete{
+    border: 4rpx solid red;
+}
+
+.edit:active{
+    background-color: #11999e;
+}
+
+.delete:active{
+    background-color: #F6CECE;
+}
+
+.adresses:active{
+    background-color: #d8d8d8;
+}
+
+/* 底部按钮 */
+.bottom_btn{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 20rpx;
+    height: 70rpx;
+    width: 90%;
+    border: solid;
+    margin: 0 auto;
+    border-radius: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 900;
+    background-color: #43DBD1;
+    color: white;
+    border: 4rpx solid #BDBDBD;
+}
+
+.bottom_btn:active{
+    background-color: #11999e;
+}
+

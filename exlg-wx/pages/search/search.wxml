@@ -1,0 +1,126 @@
+<!-- 页面主体 -->
+<view class="main">
+    <!-- 顶部导航栏 -->
+    <view class="nav">
+        <view class="daijichu" bindtap="selectDaijichu" style="color:{{daijichuColor}};border-bottom: {{daijichuLine}};"><text>待寄出 <text class="count">{{daijichu.length}}</text> </text></view>
+        <view class="wjide" bindtap="selectWojide" style="color:{{wojideColor}};border-bottom: {{wojideLine}};">我寄的 <text class="count">{{wojide.length}}</text></view>
+        <view class="woshoude" bindtap="selectWoshoude" style="color:{{woshoudeColor}};border-bottom: {{woshoudeLine}};">我收的 <text class="count">{{woshoude.length}}</text></view>
+    </view>
+
+    <!-- 搜索框 -->
+    <view class="search">
+        <view class="icon">
+            <image src="../../images/icon/search.png"></image>
+        </view>
+        <input type="text" placeholder="请输入您要查询的订单号" bindinput="idInput" />
+        <view class="searchBtn" bindtap="searchBtn">
+            <!-- <image src="../../images/icon/scanCode.png"></image> -->
+            <text>搜索</text>
+        </view>
+    </view>
+
+    <!-- 订单主体 -->
+    <view class="content">
+        <!-- 待寄出 -->
+        <view class="daijichuView" hidden="{{daijichuView}}" wx:for="{{daijichu}}" wx:key="order" wx:for-index="index" data-index="{{index}}" bindtap="enterMapBtn1">
+            <navigator url="./map/map">
+                <view class="order">
+                    <!-- 订单号 -->
+                    <view class="top">
+                        <view class="id"><text>订单号：{{daijichu[index].id}}</text></view>
+                        <!-- 复制按钮 -->
+                        <image src="../../images/icon/copy2.png" catchtap="copyId" data-id="{{item.id}}"></image>
+                    </view>
+                    <view class="bottom">
+                        <!-- 发送地+发件人 -->
+                        <view class="start">
+                            <text class="departure">{{daijichu[index].departure}}</text>
+                            <text class="send">{{daijichu[index].send}}</text>
+                        </view>
+                        <!-- 箭头+文字 -->
+                        <view class="middle">
+                            <image class="arrow" src="../../images/icon/rightArrow.png"></image>
+                            <text class="flag">\n待寄出</text>
+                        </view>
+                        <!-- 接收地+收件人 -->
+                        <text class="end">
+                            <text class="destination">{{daijichu[index].destination}}\n</text>
+                            <text class="receive">{{daijichu[index].receive}}</text>
+                        </text>
+                    </view>
+
+                    <!-- 分享按钮 -->
+                    <button open-type="share" class="share" size="mini" catchtap>分享</button>
+                </view>
+            </navigator>
+        </view>
+        <!-- 我寄的 -->
+        <view class="wojideView" hidden="{{wojideView}}" wx:for="{{wojide}}" wx:key="order" wx:for-index="index" data-index="{{index}}" bindtap="enterMapBtn2">
+            <navigator url="./map/map?departure={{wojide[index].departure}}&destination={{wojide[index].destination}}">
+                <view class="order">
+                    <!-- 订单号 -->
+                    <view class="top">
+                        <view class="id"><text>订单号：{{wojide[index].id}}</text></view>
+                        <!-- 复制按钮 -->
+                        <image src="../../images/icon/copy2.png" catchtap="copyId" data-id="{{item.id}}"></image>
+                    </view>
+                    <view class="bottom">
+                        <!-- 发送地+发件人 -->
+                        <view class="start">
+                            <text class="departure">{{wojide[index].departure}}</text>
+                            <text class="send">{{wojide[index].send}}</text>
+                        </view>
+                        <!-- 箭头+文字 -->
+                        <view class="middle">
+                            <image class="arrow" src="../../images/icon/rightArrow.png"></image>
+                            <text class="flag">\n我寄的</text>
+                        </view>
+                        <!-- 接收地+收件人 -->
+                        <text class="end">
+                            <text class="destination">{{wojide[index].destination}}\n</text>
+                            <text class="receive">{{wojide[index].receive}}</text>
+                        </text>
+                    </view>
+
+                    <!-- 分享按钮 -->
+                    <button open-type="share" class="share" size="mini" catchtap>分享</button>
+                </view>
+            </navigator>
+        </view>
+        <!-- 我收的 -->
+        <view class="woshoudeView" hidden="{{woshoudeView}}" wx:for="{{woshoude}}" wx:key="order" wx:for-index="index" data-index="{{index}}" bindtap="enterMapBtn3">
+            <navigator url="./map/map?departure={{wojide[index].departure}}&destination={{wojide[index].destination}}">
+                <view class="order">
+                    <!-- 订单号 -->
+                    <view class="top">
+                        <view class="id"><text>订单号：{{woshoude[index].id}}</text></view>
+                        <!-- 复制按钮 -->
+                        <image src="../../images/icon/copy2.png" catchtap="copyId" data-id="{{item.id}}"></image>
+                    </view>
+                    <view class="bottom">
+                        <!-- 发送地+发件人 -->
+                        <view class="start">
+                            <text class="departure">{{woshoude[index].departure}}</text>
+                            <text class="send">{{woshoude[index].send}}</text>
+                        </view>
+                        <!-- 箭头+文字 -->
+                        <view class="middle">
+                            <image class="arrow" src="../../images/icon/rightArrow.png"></image>
+                            <text class="flag">\n我收的</text>
+                        </view>
+                        <!-- 接收地+收件人 -->
+                        <text class="end">
+                            <text class="destination">{{woshoude[index].destination}}\n</text>
+                            <text class="receive">{{woshoude[index].receive}}</text>
+                        </text>
+                    </view>
+
+                    <!-- 分享按钮 -->
+                    <button open-type="share" class="share" size="mini" catchtap>分享</button>
+                </view>
+            </navigator>
+        </view>
+
+    </view>
+
+</view>

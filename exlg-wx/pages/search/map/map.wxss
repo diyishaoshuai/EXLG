@@ -1,0 +1,81 @@
+/* 地图 */
+.map map {
+    width: 100%;
+    height: 900rpx;
+}
+
+/* 顶部信息栏 */
+.order {
+    position: absolute;
+    width: 90%;
+    height: 150rpx;
+    left: 0;
+    right: 0;
+    top: 40rpx;
+    margin: auto;
+    background-color: white;
+    border-radius: 15rpx;
+    box-shadow:
+        2.8px 1.2px 4.1px rgba(0, 0, 0, 0.042),
+        0px 0px 11.3px rgba(0, 0, 0, 0.06),
+        0px 0px 27.1px rgba(0, 0, 0, 0.078),
+        0px 0px 90px rgba(0, 0, 0, 0.12);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+}
+
+.order text{
+    line-height: 0rpx;
+    text-align: center;
+    font-size: larger;
+    font-weight: 900;
+}
+
+.order image{
+    width: 100rpx;
+    height: 80rpx;
+}
+
+/*  经过站点 */
+
+.passingBy{
+    display: flex;
+    display: flex;
+    /* flex-direction: column; */
+    height: 200rpx;
+}
+/*  线 */
+.show{
+    margin-left: 30rpx;
+    border-left: 2rpx solid;
+    height: 250rpx;
+}
+/*  小圆点 */
+.point{
+    /* margin-top: 10rpx; */
+    position: relative;
+    top: 50rpx;
+    left: -10rpx;
+    height: 20rpx;
+    width: 20rpx;
+    background-color: black;
+    border-radius: 50rpx;
+}
+
+/* 主体部分 */
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    display: flex;
+}
+
+.adress{
+    font-size:x-small;
+    position: relative;
+    top: -40rpx;
+    
+}

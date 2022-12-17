@@ -1,0 +1,78 @@
+/* 表单主体 */
+.main {
+    width: 90%;
+    height: 600rpx;
+    /* border: solid; */
+    margin: 30rpx auto;
+    border-radius: 25rpx;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px #cdcfcf;
+    border: 4rpx solid #BDBDBD;
+}
+
+.main view {
+    height: 20%;
+    /* border: solid; */
+    display: flex;
+    align-items: center;
+    margin: 0 50rpx;
+    border-bottom: 1rpx solid;
+}
+
+.content {
+    margin-left: 20rpx;
+}
+
+.main text {
+    width: 180rpx;
+}
+
+/* 详细地址 */
+.main .detailedAddress {
+    height: 40%;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30rpx;
+    border-bottom: none;
+}
+
+
+
+.detailedAddresscontent {
+    /* margin-left:rpx ; */
+    /* border: solid; */
+    width: 80%;
+}
+
+/* 底部按钮 */
+.btn{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 20rpx;
+    height: 70rpx;
+    width: 90%;
+    border: solid;
+    margin: 0 auto;
+    border-radius: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 900;
+    background-color: #43DBD1;
+    color: white;
+    border: 4rpx solid #BDBDBD;
+}
+
+.btn:active{
+    background-color: #11999e;
+}
+
+/* 地区选择 */
+.address .select{
+    margin: 0 15rpx;
+    border: none;
+    color: rgb(132,133,132);
+}

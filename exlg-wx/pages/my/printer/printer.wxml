@@ -1,0 +1,26 @@
+<view class="main">
+    <!-- 我的打印机部分 -->
+    <view class="myPrinter">
+        <text>我的打印机</text>
+        <text class="printers">暂无设备</text>
+    </view>
+
+    <!-- 连接打印机部分（假的） -->
+    <view class="connect">
+        <view class="top">
+            附近打印机
+        </view>
+        <view class="btn" bindtap="searchBtn">
+            搜索
+        </view>
+
+        <view class="tips">
+            <text>提示：</text>
+            <text>1、 连接设备时，请先确认打印设备及手机蓝牙为打开。</text>
+            <text>2、 如连接失败，重启打印机后重新连接。</text>
+            <text>3、 部分安卓手机无法打印时尝试打开定位功能。</text>
+            <text>4、 部分安卓手机无法连接，检查手机设置中蓝牙权限是否允许微信使用。</text>
+            <text>5、 打印完成后请关闭蓝牙。</text>
+        </view>
+    </view>
+</view>

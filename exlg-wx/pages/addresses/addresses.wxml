@@ -1,0 +1,50 @@
+<!-- logo -->
+<view>
+    <image src="../../images/logo.png" class="logo"></image>
+</view>
+<!-- 地址簿卡片 -->
+<view class="addresses" wx:for="{{addresses}}" wx:key="addresses" wx:for-index="index" bindtap="selectAdd" data-index="{{index}}">
+    <view>
+        <!-- 上 -->
+        <view class="top">
+            <!-- 姓名 -->
+            <view class="sendUsername">
+                <text>{{addresses[index].sendUsername}}</text>
+            </view>
+            <!-- 电话 -->
+            <view class="sendTel">
+                <text>{{addresses[index].sendTel}}</text>
+            </view>
+        </view>
+        <!-- 中 -->
+        <view class="middle">
+            <!-- 地址 -->
+            <view class="address">
+                <text>{{addresses[index].area}}{{addresses[index].address}}</text>
+            </view>
+        </view>
+        <!-- 这是一根横线 -->
+        <view class="line">
+        </view>
+        <!-- 按钮组 -->
+        <view class="btns">
+        <navigator url="./address/address?id={{addresses[index].id}}" hover-class="none" catchtap="editBtn" data-index="{{addresses[index].id}}">
+            <view class="edit" data-index="{{addresses[index].id}}">
+                <image src="../../images/icon/edit.png"></image>
+                <text>编辑</text>
+            </view>
+        </navigator>
+            <view class="delete" catchtap="deleteBtn" data-index="{{addresses[index].id}}"> 
+                <i class="iconfont icon-changyonggoupiaorenshanchu" style="font-size: 40rpx; color: red;"></i>
+                <text style="color:red">删除</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 底部按钮 -->
+<navigator url="./address/address">
+    <view class="bottom_btn">
+        <text>+新建地址</text>
+    </view>
+</navigator>

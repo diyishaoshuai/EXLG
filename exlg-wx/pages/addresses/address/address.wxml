@@ -1,0 +1,32 @@
+<!-- 表单主体 -->
+<view class="main">
+    <!-- 姓名 -->
+    <view class="name">
+        <text>寄件人姓名</text>
+        <input type="text" placeholder="请填写姓名" class="content" bindinput="getNameValue" value="{{address.name}}"/>
+    </view>
+    <!-- 电话 -->
+    <view class="phoneNumber">
+        <text>寄件人号码</text>
+        <input type="text" placeholder="请填写手机号码" class="content" bindinput="getPhoneNumber" value="{{address.phoneNumber}}"/>
+    </view>
+    <!-- 地区 -->
+    <view class="address">
+        <text>所在地区</text>
+        <view class="select" bindtap="open">
+                <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+                    <text wx:if="{{region==''}}">请选择省市区</text>
+                    <text wx:if="{{region!=''}}">{{region[0]}}、{{region[1]}}、{{region[2]}}</text>
+                </picker>
+        </view>
+    </view>
+    <!-- 详细地址 -->
+    <view class="detailedAddress">
+        <text>详细地址</text>
+        <textarea type="text" placeholder="请填写详细地址" class="content detailedAddresscontent" auto-focus="true" bindinput="getDetailedAddress" value="{{address.address}}"/>
+    </view>
+</view>
+<!-- 底端保存按钮 -->
+<view class="btn" bindtap="save">
+    <text>保存</text>
+</view>

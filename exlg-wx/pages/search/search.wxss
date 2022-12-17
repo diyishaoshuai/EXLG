@@ -1,0 +1,158 @@
+/* 顶部导航 */
+.nav {
+    height: 60rpx;
+    /* border: 2rpx solid; */
+    margin: 0 20rpx;
+    padding: 0 10rpx;
+    display: flex;
+    align-items: center;
+}
+
+/* 
+.daijichu{
+    color:#43DBD1;
+} */
+
+/* 按钮键 */
+.searchBtn{
+    border: #43DBD1 solid;
+    border-radius: 50rpx;
+    width: 100rpx;
+    height: 50rpx;
+    text-align: center;
+    line-height: 50rpx;
+    color:#43DBD1;
+}
+
+.nav view {
+    border: 4rpx solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10rpx;
+}
+
+.count {
+    font-size: 20rpx;
+}
+
+/* 订单号 */
+.top{
+    display: flex;
+    margin-left: 25rpx;
+    margin-top: 10rpx;
+}
+
+.top text{
+    font-size: smaller;
+    color:#6E6E6E;
+}
+.top image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+}
+
+/* 订单样式 */
+.order:active{
+    background-color: #d8d8d8;
+}
+
+.order{
+    width: 700rpx;
+    height: 300rpx;
+    /* border: 2rpx solid; */
+    margin: 10rpx 0;
+    border-radius: 10rpx;
+    box-shadow: 5px 5px 5px #cdcfcf;
+    background: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    display: flex;
+    
+    justify-content: space-around;
+    /* border: 2rpx solid; */
+    border-bottom:2rpx solid #989898 ;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bottom image{
+    width: 80rpx;
+    height: 30rpx;
+    margin-top: 30rpx;
+}
+
+.middle{
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    /* border: 2rpx solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20rpx 0;
+}
+
+.start,.end{
+    /* margin: auto 0; */
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2rpx solid; */
+    text-align: center;
+    line-height: 70rpx;
+}
+
+.flag{
+    font-weight: 900;
+    font-size: smaller;
+    text-align: center;
+}
+
+
+.departure,.destination{
+    font-weight: 900;
+    font-size: x-large;
+    margin: 0 auto;
+}
+
+
+
+/* 搜索样式 */
+/* 俩图标 */
+.icon image{
+    width: 50rpx;
+    height: 50rpx;
+    margin: 5rpx 0 0 15rpx;
+}
+
+.search{
+    width: 90%;
+    display: flex;
+    /* border: 2rpx solid; */
+    border-radius: 50rpx;
+    margin: 10rpx auto;
+    align-items: center;
+    background-color:#F2F2F2
+}
+
+input{
+    margin-left:20rpx ;
+    width: 500rpx;
+}
+
+/* 分享按钮 */
+.share{
+    background-color: #43DBD1;
+    color: white;
+    border-radius: 50rpx;
+    margin-right: 40rpx;
+    margin-top: 10rpx;
+}

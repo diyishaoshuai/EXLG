@@ -1,0 +1,58 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.main view{
+    /* border: 2rpx solid; */
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    
+}
+
+/* 我的打印机 */
+.myPrinter{
+    height: 150rpx;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 30rpx;
+    margin: 30rpx 0;
+    box-shadow: 0 0 10rpx 8rpx #cdcfcf;
+    border-radius: 25rpx;
+
+}
+
+.printers{
+    font-size: small;
+    color: #848484;
+}
+
+/* 搜索打印机 */
+.connect{
+    height: 600rpx;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10rpx 8rpx #cdcfcf;
+    border-radius: 25rpx;
+}
+
+.main .btn{
+    border:4rpx solid #43DBD1;
+    width: 180rpx;
+    height: 70rpx;
+    border-radius: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #43DBD1;
+}
+
+
+.tips{
+    flex-direction: column;
+}
+

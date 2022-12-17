@@ -1,0 +1,124 @@
+/* 按钮布局 */
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.box {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20rpx;
+}
+
+
+
+/* 按钮样式 */
+.btns .btn {
+    box-sizing: border-box;
+    border: 2rpx solid #D8D8D8;
+    width: 340rpx;
+    height: 130rpx;
+    border-radius: 10rpx;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 40rpx;
+    /* box-shadow: 2rpx,2rpx 2rpx 2rpx #BDBDBD; */
+    box-shadow: 5px 5px 5px #cdcfcf;
+}
+
+/* 按钮点击样式 */
+.btns .btn:active {
+    background-color: #D8D8D8;
+}
+
+/* 轮播图样式 */
+swiper {
+    width: 95%;
+    border: 2rpx solid #D8D8D8;
+    border-radius: 10rpx;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.image {
+    width: 100%;
+}
+
+/* 按钮图片 */
+.btns image {
+    height: 80rpx;
+    width: 80rpx;
+    margin-right: 20rpx;
+}
+
+/* 按钮内文字 */
+.mainText {
+    font-weight: 900;
+    font-size: smaller;
+}
+
+.smllText {
+    font-weight: 100;
+    font-size: 10px;
+    color: #848484;
+}
+
+/* 中下方小菜单栏 */
+.menu {
+    width: 95%;
+    height: 150rpx;
+    /* border: 2rpx solid; */
+    margin: 0 auto;
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10rpx;
+    box-shadow: 5px 5px 5px #cdcfcf;
+}
+
+.menu view {
+    height: 90%;
+    width: 120rpx;
+    /* border: 2rpx solid; */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(249, 249, 249);
+}
+
+.menuIcon {
+    height: 80rpx;
+    width: 80rpx;
+    margin: auto;
+}
+
+/* 特殊：运费时效查询 */
+#special {
+    width: 200rpx;
+}
+
+.menu text {
+    font-size: small;
+    text-align: center;
+}
+
+/* 为数不多的按钮 */
+button::after {
+    border: none;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+    line-height: inherit;
+    margin-top: 20rpx;
+}
+
+.contact text{
+    margin-top: 10rpx;
+}

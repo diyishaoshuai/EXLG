@@ -1,0 +1,174 @@
+/* 背景图片 */
+.backgroundImg {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.logo {
+    height: 100rpx;
+    width: 200rpx;
+}
+
+/* 头像 */
+.avatar {
+    height: 200rpx;
+    width: 200rpx;
+    clip-path: circle(100rpx at center);
+    margin-left: 20rpx;
+    margin-top: 40rpx;
+}
+.avatar image{
+    height: 200rpx;
+    width: 200rpx;
+    clip-path: circle(100rpx at center);
+}
+
+/* 用户名 */
+.username {
+    color: white;
+    margin-left: 50rpx;
+    margin-top: 70rpx;
+    width: 250rpx;
+    font-size: 30rpx;
+    display: flex;
+}
+.userNickName{
+    line-height: 50rpx;
+    font-size: x-large
+}
+
+.username image {
+    width: 60rpx;
+    height: 60rpx;
+    /* float: right; */
+    margin-left:50rpx ;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+}
+
+.information {
+    display: flex;
+}
+
+/* 第一个菜单 */
+.firstMenu {
+    width: 90%;
+    height: 200rpx;
+    /* border: 2rpx solid; */
+    margin-top: 50rpx;
+    border-radius: 25rpx;
+    background-color: white;
+    box-shadow: 0 0 10rpx 8rpx #cdcfcf;
+    box-sizing: border-box;
+    /* padding: ; */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+
+    /* margin: ; */
+    padding-top: 50rpx;
+}
+
+/* 图标 */
+.icon {
+    width: 200rpx;
+    height: 150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconImg {
+    height: 60rpx;
+    width: 60rpx;
+}
+
+.iconText {
+    color: #848484;
+}
+
+/* 第二个菜单 */
+.secondMenu {
+    width: 90%;
+    height: 250rpx;
+    /* border: 2rpx solid; */
+    margin: 50rpx auto;
+    border-radius: 25rpx;
+    background-color: white;
+    box-shadow: 0 0 10rpx 8rpx #cdcfcf;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around;
+    align-items: center; */
+
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 30rpx 0;
+}
+
+.title {
+    margin-top: 15rpx;
+    margin-left: 20rpx;
+    font-weight: 900;
+}
+
+/* 第三个菜单 */
+.thirdMenu {
+    width: 90%;
+    height: 600rpx;
+    /* border: 2rpx solid; */
+    /* margin: 50rpx auto; */
+    border-radius: 25rpx;
+    background-color: white;
+    box-shadow: 0 0 10rpx 8rpx #cdcfcf;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.iconLine {
+    display: flex;
+    justify-content: space-around;
+    margin: 30rpx 0;
+}
+
+/* 字体大小 */
+.menus text{
+    font-size: small;
+}
+
+.menus{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/* btn样式清除 */
+.clearBtn{
+	margin:0;
+	padding: 0;
+	line-height: 1;
+    background-color:rgb(255, 255,255);
+    border-radius:0;
+    color: rgb(255, 255,255);
+}
+.clearBtn::after{
+    position: unset !important;
+    border: unset;
+        border:none;
+
+}
+
+/* .contact text{
+    margin-top: 10rpx;
+} */

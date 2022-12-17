@@ -1,0 +1,118 @@
+<!-- logo -->
+<view>
+    <image src="../../../images/logo.png" class="logo"></image>
+</view>
+
+<!-- 寄、收信息框 -->
+<view class="information">
+    <view class="send">
+        <view class="text">
+            <text>寄</text>
+        </view>
+        <!-- 未引入信息时 -->
+        <view class="msg" wx:if="{{selectSendMsg}}">
+            <text>请选择寄件人信息</text>
+        </view>
+        <!-- 引入信息时 -->
+        <view class="incomingDataMsg" wx:else="{{selectSendMsg}}">
+            <view class="up">
+                <text>{{sendAdress.sendUsername}}</text>
+                <text class="phoneNumberText">{{sendAdress.sendTel}}</text>
+            </view>
+            <view class="detailedAddress">{{sendAdress.area + sendAdress.address}}</view>
+        </view>
+
+        <view class="adress">
+            <navigator url="../../addresses/addresses" hover-class="none" bindtap="selectSendMsgBtn">
+                <text>地址簿</text>
+            </navigator>
+        </view>
+    </view>
+    <!-- 别看我，这只是一根横线 -->
+    <view class="line"></view>
+    <view class="receive">
+        <view class="text">
+            <text>收</text>
+        </view>
+        <view class="msg" wx:if="{{selectReceiveMsg}}">
+            <text>请选择收件人信息</text>
+        </view>
+        <view class="incomingDataMsg" wx:else="{{selectReceiveMsg}}">
+            <view class="up">
+                <text>{{receiveAdress.sendUsername}}</text>
+                <text class="phoneNumberText">{{receiveAdress.sendTel}}</text>
+            </view>
+            <view class="detailedAddress">{{receiveAdress.area + receiveAdress.address}}</view>
+        </view>
+        <view class="adress">
+            <navigator url="../../addresses/addresses" hover-class="none" bindtap="selectReceiveMsgBtn">
+                <text>地址簿</text>
+            </navigator>
+        </view>
+    </view>
+</view>
+
+<!-- 按钮组 -->
+<view class="btns">
+    <view class="left" style="background-color:{{left.backgroundColor}};color:{{left.color}};" bindtap="selectLeft">
+        <text>上门取件</text>
+    </view>
+    <view class="right" style="background-color:{{right.backgroundColor}};color:{{right.color}};" bindtap="selectRight">
+        <text> 服务点自寄</text>
+    </view>
+</view>
+
+<!-- 上门取件、服务点自寄具体选项 -->
+<view class="content">
+    <!-- 上门取件 -->
+    <view class="doorToDoor" hidden="{{dooToDoorView}}">
+        <view class="timeSelector">
+            <text>期望上门时间</text>
+            <!-- 时间选择器 -->
+            <view>
+                <picker value="{{time}}" mode="time" start="8:00" end="22:00" bindchange="changeTime">
+                    <text wx:if="{{time==''}}" class="unimportant">请选择时间 ></text>
+                    <text wx:if="{{time!=''}}">{{time}}</text>
+                </picker>
+            </view>
+        </view>
+        <!-- 物品信息选择器 -->
+        <view class="ObjSelector">
+            <text>物品信息</text>
+            <picker mode="selector" bindchange="changeObjectMsg" value="{{objectMsg}}" range="{{objectMsgOptions}}">
+                <view wx:if="{{objectMsg==''}}">
+                    <image src="../../../images/icon/must.png" alt="" class="must"></image>
+                    <text class="unimportant">请选择物品信息 ></text>
+                </view>
+                <view wx:if="{{objectMsg!=''}}">{{objectMsg}}</view>
+            </picker>
+        </view>
+    </view>
+
+    <!-- 服务点自寄 -->
+    <view class="bySelf" hidden="{{bySelfView}}">
+        <view class="ObjSelector">
+            <text>物品信息</text>
+            <picker mode="selector" bindchange="changeObjectMsg" value="{{objectMsg}}" range="{{objectMsgOptions}}">
+                <view wx:if="{{objectMsg==''}}">
+                    <image src="../../../images/icon/must.png" alt="" class="must"></image>
+                    <text class="unimportant">请选择物品信息 ></text>
+                </view>
+                <view wx:if="{{objectMsg!=''}}">{{objectMsg}}</view>
+            </picker>
+        </view>
+    </view>
+</view>
+
+<!-- 结账 -->
+<view class="counter">
+    <view class="money">
+        <text>合计：￥{{count}}</text>
+    </view>
+
+    <!-- 这只是一根竖线 -->
+    <view class="v-line"></view>
+    <view class="btn" bindtap="checkOut">
+        提交
+    </view>
+</view>

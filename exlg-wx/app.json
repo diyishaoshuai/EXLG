@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/doorToDoor-bySelf/doorToDoor-bySelf",
+    "pages/search/search",
+    "pages/my/my",
+    "pages/addresses/addresses",
+    "pages/addresses/address/address",
+    "pages/my/printer/printer",
+    "pages/search/map/map",
+    "pages/login/login"
+    ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "EXLG卓越物流",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+      "selectedColor": "#43DBD1",
+      "backgroundColor":"#F9F9F9",
+    "list": [
+        {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "images/icon/index.png",
+            "selectedIconPath":"images/icon/index_select.png"
+        },
+        {
+            "pagePath": "pages/search/search",
+            "text": "查询",
+            "iconPath":"images/icon/search.png",
+            "selectedIconPath":"images/icon/search_select.png"
+        },
+        {
+            "pagePath": "pages/my/my",
+            "text": "我的",
+            "iconPath":"images/icon/my.png",
+            "selectedIconPath":"images/icon/my_select.png"
+        }
+    ]
+},
+
+  "sitemapLocation": "sitemap.json",
+
+  "usingComponents": {
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
+  }
+}

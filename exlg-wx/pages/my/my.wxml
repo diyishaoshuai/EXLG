@@ -1,0 +1,120 @@
+<!-- 页面主体 -->
+<view class="main">
+    <!-- 头像+账号+背景 -->
+    <view class="account">
+        <image src="../../images/bg.png" class="backgroundImg"></image>
+        <image src="../../images/logo.png" class="logo"> </image>
+        <view class="information">
+            <view class="avatar" bindtap="toLogin">
+                <!-- 点击头像跳转登陆页面 -->
+                <image src="{{userInfo?'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png':userInfo.headImage}}"/>
+                <!-- <open-data type="userAvatarUrl" mode="aspectFit"></open-data> -->
+            </view>
+            <view class="username">
+                <view class="userNickName">{{userInfo.nickName}}</view>
+                <!-- <open-data type="userNickName"></open-data> -->
+                <image src="../../images/icon/setting.png"></image>
+            </view>
+        </view>
+    </view>
+    <!-- 菜单组 -->
+    <view class="menus">
+        <!-- 第一个菜单 -->
+        <view class="firstMenu">
+            <navigator url="../addresses/addresses" hover-class="none" bindtap="interactBtn">
+                <view class="icon">
+                    <image src="../../images/icon/homes.png" class="iconImg"></image>
+                    <view class="iconText"><text>地址簿</text></view>
+                </view>
+            </navigator>
+
+            <navigator url="../search/search" open-type="switchTab">
+                <view class="icon">
+                    <image src="../../images/icon/myOrder.png" class="iconImg"></image>
+                    <view class="iconText"><text>我的订单</text></view>
+                </view>
+            </navigator>
+            <view class="icon">
+                <image src="../../images/icon/earth2.png" class="iconImg"></image>
+                <view class="iconText"><text>国际订单</text></view>
+            </view>
+        </view>
+        <!-- 第二个菜单 -->
+        <view class="secondMenu">
+            <view class="title"><text>基础服务</text></view>
+            <view class="icons">
+                <view class="icon">
+                    <image src="../../images/icon/bill.png" class="iconImg"></image>
+                    <view class="iconText"><text>电子发票</text></view>
+                </view>
+                <view class="icon">
+                    <image src="../../images/icon/money.png" class="iconImg"></image>
+                    <view class="iconText"><text>运费时效查询</text></view>
+                </view>
+                <view class="icon">
+                    <image src="../../images/icon/love.png" class="iconImg"></image>
+                    <view class="iconText"><text>偏好设置</text></view>
+                </view>
+            </view>
+        </view>
+        <!-- 第三个菜单 -->
+        <view class="thirdMenu">
+            <view class="title"><text>更多服务</text></view>
+            <view class="moreIcons">
+                <!-- 第一排按钮 -->
+                <view class="iconLine">
+                    <view class="icon">
+                        <image src="../../images/icon/accounts.png" class="iconImg"></image>
+                        <view class="iconText"><text>多账号</text></view>
+                    </view>
+                    <view class="icon">
+                        <image src="../../images/icon/addFriend.png" class="iconImg"></image>
+                        <view class="iconText"><text>分享寄订单</text></view>
+                    </view>
+                    <navigator url="./printer/printer" hover-class="none">
+                        <view class="icon">
+                            <image src="../../images/icon/print.png" class="iconImg"></image>
+                            <view class="iconText"><text>连接打印机</text></view>
+                        </view>
+                    </navigator>
+                </view>
+                <!-- 第二排按钮 -->
+                <view class="iconLine">
+                    <view class="icon">
+                        <button open-type="contact" hover-class="none" class="clearBtn">
+                            <image src="../../images/icon/customerService.png" class="iconImg"></image>
+                            <view class="iconText"><text>在线客服</text></view>
+                        </button>
+
+                    </view>
+                    <navigator target="miniProgram" open-type="navigate" app-id="wxab056e746467b13f" path="" version="release"  hover-class="noshadow">
+                        <view class="icon">
+                            <image src="../../images/icon/home.png" class="iconImg"></image>
+                            <view class="iconText"><text>帮帮拿</text></view>
+                        </view>
+                    </navigator>
+
+                    <view class="icon">
+                        <image src="../../images/icon/complaint.png" class="iconImg"></image>
+                        <view class="iconText"><text>自助投诉理赔</text></view>
+                    </view>
+                </view>
+                <!-- 第三排按钮 -->
+                <view class="iconLine">
+                    <view class="icon">
+                        <image src="../../images/icon/map.png" class="iconImg"></image>
+                        <view class="iconText"><text>附近网点</text></view>
+                    </view>
+                    <view class="icon">
+                        <image src="../../images/icon/cube.png" class="iconImg"></image>
+                        <view class="iconText"><text>产品介绍</text></view>
+                    </view>
+                    <view class="icon">
+                        <image src="../../images/icon/ban.png" class="iconImg"></image>
+                        <view class="iconText"><text>禁限寄</text></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

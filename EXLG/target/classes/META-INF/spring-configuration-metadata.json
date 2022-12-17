@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "exlg.thread",
+      "type": "com.xxzy.EXLG.config.ThreadPoolConfigProperties",
+      "sourceType": "com.xxzy.EXLG.config.ThreadPoolConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "exlg.thread.core-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.xxzy.EXLG.config.ThreadPoolConfigProperties"
+    },
+    {
+      "name": "exlg.thread.keep-alive-time",
+      "type": "java.lang.Integer",
+      "sourceType": "com.xxzy.EXLG.config.ThreadPoolConfigProperties"
+    },
+    {
+      "name": "exlg.thread.max-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.xxzy.EXLG.config.ThreadPoolConfigProperties"
+    }
+  ],
+  "hints": []
+}

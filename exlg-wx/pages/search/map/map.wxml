@@ -1,0 +1,118 @@
+<!-- 地图 -->
+<view class="map">
+    <map name=""></map>
+</view>
+
+<!-- 地图上信息 -->
+<view class="order">
+    <text wx:if="{{daijichuFlag}}">
+        {{daijichu[0].departure}}
+    </text>
+    <text wx:if="{{wojideFlag}}">
+        {{wojide[0].departure}}
+    </text>
+    <text wx:if="{{woshoudeFlag}}">
+        {{woshoude[0].departure}}
+    </text>
+
+    <view>
+        <image src="../../../images/icon/rightLongArrow.png"></image>
+    </view>
+
+    <text wx:if="{{daijichuFlag}}">
+        {{daijichu[0].destination}}
+    </text>
+    <text wx:if="{{wojideFlag}}">
+        {{wojide[0].destination}}
+    </text>
+    <text wx:if="{{woshoudeFlag}}">
+        {{woshoude[0].destination}}
+    </text>
+
+
+</view>
+
+<!-- 经过、到达站点详情 -->
+<view class="passingByAdress" wx:for="{{daijichu[selectId].passingByAdress}}" wx:key="passingByAdress" wx:if="{{daijichuFlag}}">
+    <view class="passingBy">
+        <!-- 边框 -->
+        <view class="show">
+            <!-- 小圆点 -->
+            <view class="point"></view>
+        </view>
+        <view class="content">
+            <view class="top">
+                <text class="state">
+                    {{daijichu[0].passingByAdress[index].state}}
+                </text>
+                <text class="time">
+                    {{daijichu[0].passingByAdress[index].time}}
+                </text>
+            </view>
+
+            <view class="bottom">
+                <text class="adress">
+                    {{daijichu[0].passingByAdress[index].adress}}
+
+                </text>
+            </view>
+        </view>
+
+    </view>
+</view>
+
+<view class="passingByAdress" wx:for="{{wojide[0].passingByAdress}}" wx:key="passingByAdress" wx:if="{{wojideFlag}}" wx:if="{{wojideFlag}}">
+    <view class="passingBy">
+        <!-- 边框 -->
+        <view class="show">
+            <!-- 小圆点 -->
+            <view class="point"></view>
+        </view>
+        <view class="content">
+            <view class="top">
+                <text class="state">
+                    {{wojide[0].passingByAdress[index].state}}
+                </text>
+                <text class="time">
+                    {{wojide[0].passingByAdress[index].time}}
+                </text>
+            </view>
+
+            <view class="bottom">
+                <text class="adress">
+                    {{wojide[0].passingByAdress[index].adress}}
+
+                </text>
+            </view>
+        </view>
+
+    </view>
+</view>
+
+<view class="passingByAdress" wx:for="{{wojide[0].passingByAdress}}" wx:key="passingByAdress" wx:if="{{woshoudeFlag}}">
+    <view class="passingBy">
+        <!-- 边框 -->
+        <view class="show">
+            <!-- 小圆点 -->
+            <view class="point"></view>
+        </view>
+        <view class="content">
+            <view class="top">
+                <text class="state">
+                    {{woshoude[0].passingByAdress[index].state}}
+                </text>
+                <text class="time">
+                    {{woshoude[0].passingByAdress[index].time}}
+                </text>
+            </view>
+
+            <view class="bottom">
+                <text class="adress">
+                    {{woshoude[0].passingByAdress[index].adress}}
+
+                </text>
+            </view>
+        </view>
+
+    </view>
+</view>
